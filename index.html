@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <!-- Links the css file to the html -->
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    <!-- displays the message if the cart is empty in the top right hand side of the navbar -->
+    <div id="app">
+      <div class="nav-bar">
+        <div class="nav-bar__inner">
+          <button @click="toggleCartContent" 
+                  class="cart" 
+                  title="Show or hide cart content.">
+            <span v-if="cart.length">In Cart: {{ cart.length }}</span>
+            <span v-else>Your cart is empty. 😞</span>
+          </button>
+        </div>        
+      </div>
+  
+      <cart-content 
+        :show-cart-content="showCartContent"
+        :items="cart"
+      ></cart-content>
+      
+      <product :premium="premium" @add-to-cart="updateCart"></product>
+    </div>
+  
+    <footer>
+      <p>Thanks for shopping with us!</p>
+    </footer>
+    <!-- links the java file to the html file -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
