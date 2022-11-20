@@ -1,0 +1,214 @@
+body {
+    font-family: tahoma;
+    line-height: 1.3;
+    color: #282828;
+    margin: 0px;
+  }
+  /* styles and formats the navbar at the top of the screen */
+  .nav-bar {
+    background: linear-gradient(-90deg, #de2828, #010a11);
+    height: 3.75em;
+    margin-bottom: 15px;
+  }
+  
+  .nav-bar__inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: right;
+  }
+  
+  .cart {
+    display: inline-block;
+    font-size: 1rem;
+    height: 3.75em;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #fff;
+  }
+  /* this part of css styles and formats the cart section once you have chosen something to buy */
+  .cart-content {
+    z-index: 1;
+    position: absolute;
+    top: 4.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 570px;
+    padding: 1rem;
+    background: rgb(241, 231, 231);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cart-content__close {
+    float: right;
+  }
+  
+  .cart-content__title {
+    margin: 1em 0 0.5em 0;
+  }
+  
+  .cart-items {
+    width: 100%;
+    text-align: right;
+  }
+  .cart-items thead tr {
+   background-color: #cf6a6a;
+   font-weight: bold;
+  }
+  .cart-items tbody tr:nth-child(even) {
+   background-color: #cf6a6a;
+  }
+  .cart-items tbody tr:nth-child(odd) {
+   background-color: #d79d90;
+  }
+  .cart-items__head {
+    text-align: left;
+  }
+  .cart-items__product {
+    text-align: left;
+  }
+  .cart-items__num-label {
+    max-width: 3rem;
+  }
+  .cart-items__price-label {
+    max-width: 3rem;
+  }
+  .cart-items tfoot {
+    font-weight: bold;
+   }
+  
+  .product {
+    flex-flow: wrap;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  img {
+    width: 80%;
+  }
+  
+  .product-image {
+    width: 80%;
+  }
+  
+  .variants {
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .color-box {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 1em;
+    text-indent: -120%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  /* this section styles the button used to add products to the cart*/
+  .button {
+    border: none;
+    background-color: #ea1e1e;
+    color: white;
+    height: 40px;
+    width: 100px;
+    font-size: 14px;
+    cursor: pointer;
+  } 
+  
+  .-disabled {
+    background-color: #ccc;
+    color: #999;
+    cursor: not-allowed;
+  }
+  
+  .disabledButton {
+    background-color: #d8d8d8;
+  }
+  
+  .review-list {
+    padding: 0 0 0 1em;
+  }
+  
+  .review-list p {
+    margin: .25em;
+  }
+  
+  
+  .review__name {
+    font-weight: bold;
+  }
+  
+  .review-form {
+    width: 100%;
+    max-width: 458px;
+  }
+  
+  input {
+    width: 100%;  
+    height: 2em;
+    margin-bottom: 20px;
+    border: 1px dotted #aaa;
+    background-color: aliceblue;
+  }
+  
+  input[type="submit"] {
+    cursor: pointer;
+  }
+  /* styles the review box */
+  textarea {
+    width: 100%;
+    border: 1px dotted rgb(233, 229, 229);
+    background-color: rgb(232, 232, 232);
+  }
+  
+  .tabs {
+    padding: 0;
+    list-style-type: none;
+    border-bottom: 1px solid #aaa;
+  }
+  
+  .tab {
+    cursor: pointer;
+    background-color: #ccc;
+    padding: 0.25em;
+    border: 1px solid #aaa;
+    margin-right: 1em;
+    border: 1px solid #aaa;
+    display: inline-block;
+    position: relative;
+    border-bottom: none;
+  }
+  
+  .activeTab {
+    background-color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    margin-bottom: -1px;
+  }
+  
+  @media screen and (min-width: 450px) {
+    .product {
+      display: flex;
+      flex-flow: wrap;
+    }
+  
+    .product-image,
+    .product-info {
+      width: 50%;
+    }
+  
+    .section-reviews {
+      flex-grow: 1;
+    }
+  }
+  
+  footer {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
